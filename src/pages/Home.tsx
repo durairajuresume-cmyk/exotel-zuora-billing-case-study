@@ -36,8 +36,8 @@ const deliverables = [
   {
     to: '/slides',
     icon: Presentation,
-    title: '10-Slide Presentation',
-    body: 'An executive-ready deck with appendix slides, built to present live or export to PDF.',
+    title: '19-Slide Presentation',
+    body: '13 core slides plus 6 appendix slides, built to present live or export to PDF.',
   },
 ];
 

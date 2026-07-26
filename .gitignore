@@ -26,3 +26,5 @@ dist-ssr
 # Local AI-assistant tooling config and prompt brief — not part of the published deliverable
 .claude/
 CLAUDE.md
+.vercel
+.env*

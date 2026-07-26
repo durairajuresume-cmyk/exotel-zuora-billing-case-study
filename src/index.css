@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0e14;
+  --color-surface: #10151f;
+  --color-surface-2: #161d2b;
+  --color-surface-3: #1c2436;
+  --color-border: #232c3d;
+  --color-border-light: #2c3648;
+  --color-text: #e6ebf2;
+  --color-text-muted: #8b96a8;
+  --color-text-dim: #5c6779;
+  --color-accent: #2dd4bf;
+  --color-accent-dim: #14b8a6;
+  --color-accent-soft: rgba(45, 212, 191, 0.12);
+  --color-cyan: #22d3ee;
+  --color-amber: #f59e0b;
+  --color-red: #f87171;
+  --color-green: #4ade80;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+/* ---------- Slide deck print styles ---------- */
+@media print {
+  @page {
+    size: 1280px 720px landscape;
+    margin: 0;
+  }
+  html, body {
+    background: #0a0e14 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .slide-page {
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
